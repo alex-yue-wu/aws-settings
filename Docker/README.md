@@ -21,7 +21,7 @@ sudo usermod -a -G docker ec2-user
 ## Reload a Linux user's group assignments to docker w/o logout
 
 ```
-id ec2-user # Reload a Linux user's group assignments to docker w/o logout
+id ec2-user
 ```
 
 ```
@@ -35,7 +35,7 @@ sudo yum install python3-pip
 ```
 
 ```
-sudo pip3 install docker-compose # with root access
+sudo pip3 install docker-compose
 ```
 
 ## Enable docker service at AMI boot time

@@ -18,6 +18,18 @@ sudo yum install git -y
 git version
 ```
 
+## create SSH key
+
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+## copy public key
+
+```
+cat ~/.ssh/id_ed25519.pub
+```
+
 ## config
 
 ```

@@ -15,6 +15,6 @@ R -e "install.packages(c('tidyverse', 'glue'), dependencies=TRUE, repos='http://
 ```
 
 ```
-install.packages("tidyverse)
+install.packages("tidyverse")
 install.packages("glue")
 ```

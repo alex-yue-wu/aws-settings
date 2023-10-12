@@ -1,24 +1,26 @@
 # Setting up Docker on AWS
 
-## update packages
+## Amazon Linux Instance
+
+#### update packages
 
 ```
 sudo yum update
 ```
 
-## install docker
+#### install docker
 
 ```
 sudo yum install docker -y
 ```
 
-## add user to docker group
+#### add user to docker group
 
 ```
 sudo usermod -a -G docker ec2-user
 ```
 
-## Reload a Linux user's group assignments to docker w/o logout
+#### Reload a Linux user's group assignments to docker w/o logout
 
 ```
 id ec2-user
@@ -28,7 +30,7 @@ id ec2-user
 newgrp docker
 ```
 
-## install docker-compose (optional)
+#### install docker-compose (optional)
 
 ```
 sudo yum install python3-pip
@@ -38,25 +40,25 @@ sudo yum install python3-pip
 sudo pip3 install docker-compose
 ```
 
-## Enable docker service at AMI boot time
+#### Enable docker service at AMI boot time
 
 ```
 sudo systemctl enable docker.service
 ```
 
-## Start the Docker service
+#### Start the Docker service
 
 ```
 sudo systemctl start docker.service
 ```
 
-## verification by getting docker service status
+#### verification by getting docker service status
 
 ```
 sudo systemctl status docker.service
 ```
 
-## export PATH
+#### export PATH
 
 ```
 echo "export PATH=$PATH:/usr/local/bin" >> ~/.bash_profile

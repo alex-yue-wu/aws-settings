@@ -30,14 +30,26 @@ id ec2-user
 newgrp docker
 ```
 
-### install docker-compose (optional)
+### install docker-compose (optional, [V2] (https://docs.docker.com/compose/install/linux/#install-using-the-repository))
+
+##### download and install the Compose CLI plugin
 
 ```
-sudo yum install python3-pip
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.26.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 
+##### apply executable permissions to the binary
+
 ```
-sudo pip3 install docker-compose
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+```
+
+##### test the installation
+
+```
+docker compose version
 ```
 
 ### Enable docker service at AMI boot time
@@ -131,4 +143,11 @@ id $USER
 
 ```
 newgrp docker
+```
+
+### install docker-compose (optional, [V2] (https://docs.docker.com/compose/install/linux/#install-using-the-repository))
+
+```
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
 ```

@@ -30,9 +30,11 @@ id ec2-user
 newgrp docker
 ```
 
-### install docker-compose (optional, [V2] (https://docs.docker.com/compose/install/linux/#install-using-the-repository))
+### install docker-compose (optional)
 
-##### download and install the Compose CLI plugin
+##### V2 (https://docs.docker.com/compose/install/linux/#install-using-the-repository)
+
+#### download and install the Compose CLI plugin
 
 ```
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
@@ -40,13 +42,13 @@ mkdir -p $DOCKER_CONFIG/cli-plugins
 curl -SL https://github.com/docker/compose/releases/download/v2.26.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 
-##### apply executable permissions to the binary
+#### apply executable permissions to the binary
 
 ```
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 
-##### test the installation
+#### test the installation
 
 ```
 docker compose version
@@ -145,7 +147,9 @@ id $USER
 newgrp docker
 ```
 
-### install docker-compose (optional, [V2] (https://docs.docker.com/compose/install/linux/#install-using-the-repository))
+### install docker-compose (optional)
+
+##### V2 (https://docs.docker.com/compose/install/linux/#install-using-the-repository)
 
 ```
 sudo apt-get update
